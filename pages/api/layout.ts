@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import axios from 'axios'
 import { ILayoutProps } from '../../components/Layout'
-import { CMSDOMAIN } from '@/utils'
+import { CMSDOMAIN } from '@/constants'
 import { isEmpty } from 'lodash'
 
 const getLayoutData = (

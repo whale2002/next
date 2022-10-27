@@ -1,10 +1,11 @@
-import "../styles/globals.css";
 import type { AppContext, AppProps } from "next/app";
 import App from "next/app";
 import { Layout, ILayoutProps } from "@/components/Layout";
 import Head from "next/head";
-import { LOCALDOMAIN } from '@/utils'
+import { LOCALDOMAIN } from '@/constants'
 import axios from "axios";
+import { ThemeContextProvider } from '@/stores/theme'
+import "../styles/global.scss";
 
 const MyApp = (data: AppProps & ILayoutProps) => {
   const { Component, pageProps, navbarData, footerData } = data;
@@ -19,9 +20,12 @@ const MyApp = (data: AppProps & ILayoutProps) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout navbarData={navbarData} footerData={footerData}>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeContextProvider>
+        <Layout navbarData={navbarData} footerData={footerData}>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeContextProvider>
+      
     </div>
   );
 };
