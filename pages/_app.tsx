@@ -2,7 +2,6 @@ import type { AppContext, AppProps } from "next/app";
 import App from "next/app";
 import { Layout, ILayoutProps } from "@/components/Layout";
 import Head from "next/head";
-import { LOCALDOMAIN } from '@/constants'
 import axios from "axios";
 import { ThemeContextProvider } from '@/stores/theme'
 import "../styles/global.scss";
@@ -32,7 +31,7 @@ const MyApp = (data: AppProps & ILayoutProps) => {
 
 MyApp.getInitialProps = async (context: AppContext) => {
   const pageProps = await App.getInitialProps(context);
-  const { data } = await axios.get(`${LOCALDOMAIN}/api/layout`)
+  const { data } = await axios.get('/api/layout')
 
   return {
     ...pageProps,
