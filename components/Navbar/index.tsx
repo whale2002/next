@@ -10,7 +10,7 @@ export const NavBar: FC<INavBarProps> = ({}) => {
 
   return (
     <div className={styles.navBar}>
-      <a href="http://localhost:3000/">
+      <a href="/">
         <div className={styles.logoIcon}></div>
       </a>
       <div
