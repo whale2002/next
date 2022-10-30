@@ -47,7 +47,7 @@ const Home: NextPage<IProps> = ({ title, description, list }) => {
 Home.getInitialProps = (context) => {
   return {
     title: "Hello NextJS!",
-    description: "A Demo for NextJS + Strapi",
+    description: "A Demo for NextJS, deployed by pm2",
     list: [
       {
         label: "文章1",
