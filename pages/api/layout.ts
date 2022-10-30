@@ -77,11 +77,11 @@ const getLayoutData = (
           title: '了解更多',
           links: {
             data: [
-              { label: '语雀' },
+              { label: '语雀'},
               {
                 label: '知乎'
               },
-              { label: 'Github' },
+              { label: 'Github'},
               { label: '掘金' }
             ]
           }

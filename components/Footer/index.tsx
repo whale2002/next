@@ -20,7 +20,7 @@ export interface IFooterProps {
   title: string;
   linkList: ILinkList[];
   qrCode: IQRCode;
-  copyRight: string;
+  copyRight: string,
   siteNumber: string; // 站点备案号
   publicNumber: string; // 公安备案号
 }
