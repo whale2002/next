@@ -2,9 +2,9 @@ import type { AppContext, AppProps } from "next/app";
 import App from "next/app";
 import { Layout, ILayoutProps } from "@/components/Layout";
 import Head from "next/head";
-import axios from "axios";
 import { ThemeContextProvider } from '@/stores/theme'
 import "../styles/global.scss";
+import { getLayoutData } from '@/network'
 
 const MyApp = (data: AppProps & ILayoutProps) => {
   const { Component, pageProps, navbarData, footerData } = data;
@@ -31,7 +31,7 @@ const MyApp = (data: AppProps & ILayoutProps) => {
 
 MyApp.getInitialProps = async (context: AppContext) => {
   const pageProps = await App.getInitialProps(context);
-  const { data } = await axios.get('/api/layout')
+  const { data } = await getLayoutData()
 
   return {
     ...pageProps,
