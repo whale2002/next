@@ -13,12 +13,12 @@ interface IProps {
 export const LanguageContext = createContext<ILanguageContextProps>({} as ILanguageContextProps)
 
 export const LanguageContextProvider = ({children}: IProps): JSX.Element => {
-  const [language, setLanguage] = useState<Language>(Language.ch)
+  const [language, setLanguage] = useState<Language>(Language.zh)
 
   useEffect(() => {
     const checkLanguage = (): void => {
       const item =
-        (localStorage.getItem("language") as Language) || Language.ch;
+        (localStorage.getItem("language") as Language) || Language.zh;
       setLanguage(item);
     };
     checkLanguage();

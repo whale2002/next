@@ -11,6 +11,6 @@ export enum Environment {
 }
 
 export enum Language {
-  ch = 'ch',
+  zh = 'zh',
   en = 'en'
 }
