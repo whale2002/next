@@ -1,14 +1,20 @@
-import { FC, useContext } from "react";
+import { FC, useCallback, useContext } from "react";
 import styles from "./styles.module.scss";
-import { Themes, Environment } from '@/constants'
+import { Themes, Language } from '@/constants'
 import { ThemeContext } from "@/stores/theme"
 import { UserAgentContext } from "@/stores/userAgent"
+import { LanguageContext } from '@/stores/language'
 
 export interface INavBarProps {}
 
 export const NavBar: FC<INavBarProps> = ({}) => {
   const { setTheme } = useContext(ThemeContext)
   const { userAgent } = useContext(UserAgentContext)
+  const { language, setLanguage } = useContext(LanguageContext)
+
+  const handleLangChange = useCallback(() => {
+    language === 'zh' ? setLanguage(Language.en) : setLanguage(Language.zh)
+  }, [language])
 
   return (
     <div className={styles.navBar}>
@@ -16,15 +22,12 @@ export const NavBar: FC<INavBarProps> = ({}) => {
         <div className={styles.logoIcon}></div>
       </a>
       <div className={styles.themeArea}>
-        {userAgent === Environment.pc && (
-          <span className={styles.text}>当前为PC端</span>
-        )}
-        {userAgent === Environment.ipad && (
-          <span className={styles.text}>当前为Pad端</span>
-        )}
-        {userAgent === Environment.mobile && (
-          <span className={styles.text}>当前为移动端</span>
-        )}
+        <span className={styles.text}>{userAgent}</span>
+        <button className={styles.lang} onClick={() => handleLangChange()}>
+          {
+            language === 'zh' ? "English" : '中文'
+          }
+        </button>
         <div
           className={styles.themeIcon}
           onClick={(): void => {

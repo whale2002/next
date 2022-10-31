@@ -30,7 +30,7 @@ const Home: NextPage<IProps> = (content) => {
     window.requestAnimationFrame(() => {
       mainRef.current?.classList.add(styles.withAnimation);
     });
-  }, [theme])
+  }, [theme, language])
 
   return (
     <div className={styles.container}>
@@ -46,7 +46,7 @@ const Home: NextPage<IProps> = (content) => {
                 key={index}
                 className={styles.card}
               >
-                <h2>{item.label} &rarr;</h2>
+                <h2>{item.label}</h2>
                 <p>{item.info}</p>
               </div>
             );
@@ -80,12 +80,12 @@ Home.getInitialProps = (context) => {
           info: "Internationalization",
         },
         {
-          label: "文章5",
-          info: "A test for article5",
+          label: "Todo",
+          info: "Todo",
         },
         {
-          label: "文章6",
-          info: "A test for article6",
+          label: "Todo",
+          info: "Todo",
         },
       ],
     },
@@ -110,12 +110,12 @@ Home.getInitialProps = (context) => {
           info: "Internationalization",
         },
         {
-          label: "文章5",
-          info: "A test for article5"
+          label: "Todo",
+          info: "Todo"
         },
         {
           label: "文章6",
-          info: "A test for article6",
+          info: "Todo",
         },
       ],
     }

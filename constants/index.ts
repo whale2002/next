@@ -4,9 +4,9 @@ export enum Themes {
 }
 
 export enum Environment {
-  pc = 'pc',
-  ipad = 'ipad',
-  mobile = 'mobile',
+  pc = 'PC',
+  ipad = 'iPad',
+  mobile = 'Mobile',
   none = 'none'
 }
 

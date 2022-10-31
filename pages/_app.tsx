@@ -20,15 +20,16 @@ const MyApp = (data: AppProps & ILayoutProps & IDeviceProps ) => {
   return (
     <div>
       <Head>
-        <title>Nextjs Demo</title>
+        <title>Nextjs</title>
         <meta
           name="description"
           content={`A Demo for SSR 官网(${
-            isMobile ? "移动端" : "PC端"
+            isMobile ? "mobile" : "PC"
           })`}
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <ThemeContextProvider>
         <UserAgentProvider>
           <LanguageContextProvider>
