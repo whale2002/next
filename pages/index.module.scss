@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 50rem;
 }
 
 .card {
@@ -45,9 +45,9 @@
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border-radius: .625rem;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  max-width: 18.75rem;
   cursor: pointer;
 }
 
@@ -105,12 +105,12 @@
 
 @keyframes fadeInDown1 {
   0% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
   11% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
@@ -123,12 +123,12 @@
 
 @keyframes fadeInDown2 {
   0% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
   22% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
@@ -141,12 +141,12 @@
 
 @keyframes fadeInDown3 {
   0% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
   33% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
@@ -159,12 +159,12 @@
 
 @keyframes fadeInDown4 {
   0% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
   44% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
@@ -177,12 +177,12 @@
 
 @keyframes fadeInDown5 {
   0% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
   55% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
@@ -195,12 +195,12 @@
 
 @keyframes fadeInDown6 {
   0% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
   66% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
@@ -213,12 +213,12 @@
 
 @keyframes fadeInDown7 {
   0% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
   77% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
@@ -231,12 +231,12 @@
 
 @keyframes fadeInDown8 {
   0% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 
   88% {
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 2.5rem, 0);
     opacity: 0;
   }
 

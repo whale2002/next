@@ -19,7 +19,6 @@ const Home: NextPage<IProps> = ({ title, description, list }) => {
   const { theme } = useContext(ThemeContext)
 
   useEffect(() => {
-    console.log('change');
     mainRef.current?.classList.remove(styles.withAnimation)
     window.requestAnimationFrame(() => {
       mainRef.current?.classList.add(styles.withAnimation);
