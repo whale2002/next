@@ -17,13 +17,13 @@ export const NavBar: FC<INavBarProps> = ({}) => {
       </a>
       <div className={styles.themeArea}>
         {userAgent === Environment.pc && (
-          <span className={styles.text}>PC端样式</span>
+          <span className={styles.text}>当前为PC端</span>
         )}
         {userAgent === Environment.ipad && (
-          <span className={styles.text}>Pad端样式</span>
+          <span className={styles.text}>当前为Pad端</span>
         )}
         {userAgent === Environment.mobile && (
-          <span className={styles.text}>移动端样式</span>
+          <span className={styles.text}>当前为移动端</span>
         )}
         <div
           className={styles.themeIcon}

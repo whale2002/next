@@ -4,6 +4,7 @@ import Head from "next/head";
 import { Layout, ILayoutProps } from "@/components/Layout";
 import { ThemeContextProvider } from '@/stores/theme'
 import { UserAgentProvider } from "@/stores/userAgent";
+import { LanguageContextProvider } from "@/stores/language"
 import { getLayoutData } from '@/network'
 import { getIsMobile } from "@/utils";
 import "../styles/global.scss";
@@ -30,9 +31,11 @@ const MyApp = (data: AppProps & ILayoutProps & IDeviceProps ) => {
       </Head>
       <ThemeContextProvider>
         <UserAgentProvider>
-          <Layout navbarData={navbarData} footerData={footerData}>
-            <Component {...pageProps} />
-          </Layout>
+          <LanguageContextProvider>
+            <Layout navbarData={navbarData} footerData={footerData}>
+              <Component {...pageProps} />
+            </Layout>
+          </LanguageContextProvider>
         </UserAgentProvider>
       </ThemeContextProvider>
       

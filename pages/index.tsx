@@ -38,13 +38,6 @@ const Home: NextPage<IProps> = ({ title, description, list }) => {
               <div
                 key={index}
                 className={styles.card}
-                onClick={(): void => {
-                  window.open(
-                    item.link,
-                    "blank",
-                    "noopener=yes,noreferrer=yes"
-                  );
-                }}
               >
                 <h2>{item.label} &rarr;</h2>
                 <p>{item.info}</p>
@@ -63,23 +56,23 @@ Home.getInitialProps = (context) => {
     description: "A Demo for NextJS, deployed by pm2",
     list: [
       {
-        label: "文章1",
-        info: "A test for article1",
+        label: "主题化",
+        info: "Thematization",
         link: "/article/1",
       },
       {
-        label: "文章2",
-        info: "A test for article2",
+        label: "响应式",
+        info: "Responsive",
         link: "/article/2",
       },
       {
-        label: "文章3",
-        info: "A test for article3",
+        label: "帧动画",
+        info: "Frame animation",
         link: "/article/3",
       },
       {
-        label: "文章4",
-        info: "A test for article4",
+        label: "国际化(实现中)",
+        info: "Internationalization",
         link: "/article/4",
       },
       {
